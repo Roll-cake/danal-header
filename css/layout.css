@@ -1,4 +1,3 @@
-@charset "UTF-8";
 body {
   font-family: "Lato", "Pretendard", "Dotum", sans-serif;
   font-size: 16px;
@@ -24,149 +23,96 @@ p {
   line-height: 1.5;
 }
 
+button {
+  border: none;
+  background: none;
+  outline: none;
+  padding: 0;
+}
+
 .header {
-  /* .header -> css에 표시되는 주석.*/
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: flex-start;
-  width: 100%;
-  padding: 0 50px;
-  height: 100px;
-  z-index: 99;
-  position: fixed;
-  box-sizing: border-box;
-  color: #fff;
-  overflow: hidden;
-  transition: all 0.25s ease;
-  top: 0;
-}
-.header:after {
-  content: "";
-  display: block;
-  position: absolute;
-  left: 0;
-  top: 100px;
-  width: 100%;
-  height: 1px;
-  background-color: #ccc;
-  opacity: 0;
-  transition: all 0.25s ease;
-  pointer-events: noen;
-}
-.header.on {
-  height: 380px;
   background-color: #fff;
-  color: #111;
-}
-.header.on .link {
-  border-color: #111;
-  color: #111;
-}
-.header.on:after {
-  opacity: 1;
-}
-.header.scroll {
-  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
-  background-color: #fff;
-  color: #111;
-}
-.header.scroll .link {
-  color: #111;
-  border-color: #111;
 }
 .header .logo__link {
   display: flex;
   align-items: center;
-  height: 100px;
+  height: 60px;
+  padding-left: 20px;
 }
 .header .logo__img {
-  height: 50px;
+  height: 40px;
 }
-.header .gnb__list {
-  display: flex;
-  flex-direction: row;
-}
-.header .gnb__list > li:hover > a {
-  color: #297bf6;
-}
-.header .gnb__list > li:hover > a:after {
-  transform: scaleX(1);
-}
-.header .gnb__list > li > a {
-  display: flex;
-  align-items: center;
-  height: 100px;
-  padding: 0 60px;
-  position: relative;
-}
-.header .gnb__list > li > a font {
-  font-size: 18px;
-  font-weight: 700;
-}
-.header .gnb__list > li > a:after {
-  content: "";
-  display: block;
-  width: 100%;
-  height: 3px;
-  background-color: #297bf6;
+.header .btn--all {
+  width: 60px;
+  height: 60px;
   position: absolute;
+  top: 0;
+  right: 0;
+}
+.header .btn--all span {
+  display: block;
+  width: 30px;
+  height: 2px;
+  background-color: #111;
+  position: absolute;
+  left: 15px;
+  transition: all 0.25 ease;
+}
+.header .btn--all span:nth-child(1) {
+  top: 19px;
+}
+.header .btn--all span:nth-child(2) {
+  top: 29px;
+}
+.header .btn--all span:nth-child(3) {
+  top: 39px;
+}
+.header.on .btn--all span:nth-child(1) {
+  top: 29px;
+  transform: rotate(45deg);
+}
+.header.on .btn--all span:nth-child(1) {
+  opacity: 0;
+  transform: translateX(-50px);
+}
+.header.on .btn--all span:nth-child(1) {
+  top: 29px;
+  transform: rotate(-45deg);
+}
+.header.on .gnb {
   left: 0;
-  bottom: 0;
-  transform: scaleX(0);
+}
+.header .gnb {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  left: 100;
   transition: all 0.25s ease;
 }
-.header .gnb__list .last {
-  border-right: 1px solid #ccc;
+.header .gnb__list > li > a {
+  height: 50px;
+  display: flex;
+  align-items: center;
+  border-top: 1px solid #ccc;
+}
+.header .gnb__list > li > a::before {
+  content: "";
+  display: block;
+  width: 3px;
+  height: 3px;
+  background-color: #297bf6;
+  border-radius: 10px;
+  margin: 0 10px 0 20px;
 }
 .header .gnb__list--sub {
-  padding-top: 30px;
-  border-left: 1px solid #ccc;
-  height: 250px;
+  background-color: #297bf6;
+  color: #fff;
+  display: none;
 }
 .header .gnb__list--sub li a {
   display: flex;
-  padding: 10px 0;
-  justify-content: center;
-}
-.header .link {
-  border: 2px solid #fff;
-  padding: 20px 30px;
-  border-radius: 100%;
-  margin-top: 20px;
-}
-
-.footer {
-  padding: 80px 0;
-  background-color: #f8f8f8;
-  border-top: 1px solid #ccc;
-}
-.footer .upper {
-  display: flex;
-}
-.footer .upper .logo img {
-  width: 120px;
-}
-.footer .upper .list {
-  display: flex;
-  margin-top: 10px;
-}
-.footer .upper .list li {
-  margin-left: 50px;
-  font-weight: 500;
-  color: #999;
-}
-.footer .upper .list li:nth-child(1) {
-  color: #111;
-  font-weight: 700;
-}
-.footer .upper .select {
-  margin-left: auto;
-  width: 250px;
-  height: 40px;
-  border: 1px solid #ccc;
-}
-.footer .lower {
-  margin-top: 30px;
+  padding: 15px 0 15px 30px;
   font-size: 14px;
+  border-top: 1px solid #0a60e2;
 }/*# sourceMappingURL=layout.css.map */

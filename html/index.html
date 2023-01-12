@@ -3,7 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- meta name="viewport" content="width=device-width, initial-scale=1.0 -->
+    <!-- viewport -> 크기 설정 ->width device-width ->화면 크기대로 / 모바일 용이라 줌 인 안되게 수정-->
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"
+    />
+
     <title>다날 - 다가오는 날은 다 좋은 날</title>
     <!-- prettier-ignore -->
     <link rel="shortcut icon" href="../image/layout1/favicon2.ico" type="image/x-icon" />
@@ -48,10 +55,46 @@
             <li><a href="">오시는길</a></li>
           </ul>
         </li>
-        <li><a href="">서비스</a></li>
-        <li><a href="">투자</a></li>
-        <li><a href="">홍보</a></li>
-        <li><a href="">채용</a></li>
+        <li><a href="">서비스</a>
+          <ul class="gnb__list--sub">
+            <li><a href="">다날소개</a></li>
+            <li><a href="">인사말</a></li>
+            <li><a href="">경영이념</a></li>
+            <li><a href="">연혁/수상</a></li>
+            <li><a href="">계열회사</a></li>
+            <li><a href="">오시는길</a></li>
+          </ul>
+        </li>
+        <li><a href="">투자</a>
+          <ul class="gnb__list--sub">
+            <li><a href="">다날소개</a></li>
+            <li><a href="">인사말</a></li>
+            <li><a href="">경영이념</a></li>
+            <li><a href="">연혁/수상</a></li>
+            <li><a href="">계열회사</a></li>
+            <li><a href="">오시는길</a></li>
+          </ul>
+        </li>
+        <li><a href="">홍보</a>
+          <ul class="gnb__list--sub">
+            <li><a href="">다날소개</a></li>
+            <li><a href="">인사말</a></li>
+            <li><a href="">경영이념</a></li>
+            <li><a href="">연혁/수상</a></li>
+            <li><a href="">계열회사</a></li>
+            <li><a href="">오시는길</a></li>
+          </ul>
+        </li>
+        <li><a href="">채용</a>
+          <ul class="gnb__list--sub">
+            <li><a href="">다날소개</a></li>
+            <li><a href="">인사말</a></li>
+            <li><a href="">경영이념</a></li>
+            <li><a href="">연혁/수상</a></li>
+            <li><a href="">계열회사</a></li>
+            <li><a href="">오시는길</a></li>
+          </ul>
+        </li>
         <li><a href="">윤리경영</a>
           <ul class="gnb__list--sub last">
             <li><a href="">다날소개</a></li>
@@ -64,6 +107,12 @@
       </ul>
       </nav>
       <a href="" class="link">결제내역조회</a>
+      <!-- 햄버거 목차 버튼  -->
+      <button class="btn btn--all">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
       <!-- css효과를 주기 위해 a 를 쓰면 로고도 같이 먹어서 class값을 지정 -->
     </header>
     <!--heder end -->
