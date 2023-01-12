@@ -132,8 +132,7 @@ button {
         //목차
         background-color: $blue;
         color: #fff;
-        display: none; //왜 했는지 몰라
-        //열고 닫고
+        display: none; //header가 on이 되었을때만 나와야 해서
         transition: all 0.25s ease;
         &.on {
           //sub에 on을 해서 왔다 갔다
