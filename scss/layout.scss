@@ -36,12 +36,17 @@ button {
 .header {
   $h: 60px; //모바일이니까 낮게
   background-color: #fff;
+  height: $h;
+  position: fixed;
+  width: 100%;
+  z-index: 99; //비디오가 위에 있어서 줌
+  top: 0; //비디오가 위에 있어서 줌
   .logo {
     &__link {
       display: flex;
       align-items: center;
       height: $h; //부모 높이에 맞춤
-      padding-left: 20px;
+      padding-left: 20px; //로고 사이
     }
     &__img {
       height: 40px; // = $h-20px 연산가능
@@ -81,11 +86,11 @@ button {
           top: 29px;
           transform: rotate(45deg);
         }
-        &:nth-child(1) {
+        &:nth-child(2) {
           opacity: 0;
           transform: translateX(-50px); //왼쪽으로 사라진다.
         }
-        &:nth-child(1) {
+        &:nth-child(3) {
           top: 29px;
           transform: rotate(-45deg);
         }
@@ -100,7 +105,7 @@ button {
     width: 100%;
     height: 100%;
     background-color: #fff;
-    left: 100;
+    left: 100%;
     transition: all 0.25s ease;
     &__list {
       > li {
@@ -109,6 +114,7 @@ button {
           height: 50px;
           display: flex;
           align-items: center;
+          font-weight: 500;
           border-top: 1px solid #ccc; //확인용
           &::before {
             //점 만들려고
@@ -127,16 +133,50 @@ button {
         background-color: $blue;
         color: #fff;
         display: none; //왜 했는지 몰라
+        //열고 닫고
+        transition: all 0.25s ease;
+        &.on {
+          //sub에 on을 해서 왔다 갔다
+          display: block;
+        }
         li {
           a {
+            //목차 세부내용
             display: flex;
-            padding: 15px 0 15px 30px;
+            align-items: center;
+            padding: 15px 0 15px 10px;
             font-size: 14px;
             border-top: 1px solid darken($blue, 10); //10%로 어둡게 나온다.
             // border-top:1px solid #ccc; -> 회색이 들어가는게 싫어서 darken을 쓴다.
+            &:before {
+              //점 만들려고
+              content: "";
+              display: block;
+              width: 3px;
+              height: 3px;
+              background-color: #fff; //import 확인
+              border-radius: 10px;
+              margin: 0 10px 0 20px;
+            }
           }
         }
       }
     }
+  }
+  .link {
+    position: absolute;
+    height: 30px;
+    padding: 0 20px;
+    font-size: 14px;
+    border-radius: 100px;
+    top: 15px; //부모가 60px-> 15면 정가운데
+    background-color: $blue;
+    color: #fff;
+    right: 60px;
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+    overflow: hidden;
+    @include longShadow(20, darken ($blue, 20));
   }
 }
